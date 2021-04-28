@@ -1,0 +1,35 @@
+<% layout('layout/boilerplate') %>
+
+    <h1 class="text-center mt-3">Edit <%= theme.title %>
+    </h1>
+    <div class="container">
+        <form action="/themes/<%= theme._id %>?_method=PUT " method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Edit Theme Title</label>
+                <input type="text" class="form-control" id="title" name="title">
+            </div>
+            <div class="mb-3">
+                <label for="themeImage" class="form-label">Upload Theme Cover Image</label>
+                <input type="file" class="form-control" id="themeImage" name="themeImage">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Edit Theme Description</label>
+                <input type="text" class="form-control" id="description" name="themeDescription">
+            </div>
+            <div class="mb-3">
+                <label for="company" class="form-label">Edit Your Company</label>
+                <input type="text" class="form-control" id="company" name="company">
+            </div>
+            <div class="mb-3">
+                <label for="difficulty" class="form-label">Edit Game Difficulty</label>
+                <select class="form-select" name="difficulty">
+                    <option selected>Choose a level of difficulties</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+
+            <button class="btn btn-success">Edit <%= theme.title %> </button>
+        </form>
+    </div>

@@ -1,0 +1,16 @@
+body {
+    background-image: url('img/escape-room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+.introduction {
+    background-color: rgba(27, 53, 53, 0.649);
+    border-radius: 0.5em;
+
+}

@@ -1,0 +1,19 @@
+<!-- First page after launch a theme. Show all puzzles. -->
+<!-- Get "theme" from controller/theme.showTheme -->
+<% layout('layout/boilerplate') %>
+    <div class="container">
+        <h1 class="text-center mt-3">
+            <%= theme.title %> Hint System
+        </h1>
+        <div class="row mt-5">
+            <% for (i of theme.puzzle){ %>
+                <div class="col-3 mt-3 g-3">
+                    <a href="/themes/<%= theme._id %>/p/<%= i._id %>  ">
+                        <img class="img-fluid" src="<%= i.puzzleImage.url %> ">
+                    </a>
+                </div>
+                <% } %>
+        </div>
+        <a class="btn btn-success mt-5 me-2" href="/themes/<%= theme._id %>/p/newPuzzle ">Add Puzzle</a>
+        <a class="btn btn-info mt-5 ms-2 text-white" href="/themes">Main Menu</a>
+    </div>

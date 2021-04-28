@@ -1,0 +1,17 @@
+<% layout('layout/boilerplate') %>
+    <h1 class="text-center mt-3">Edit Puzzle For <%= theme.title %>
+    </h1>
+    <div class="container">
+        <form action="/themes/<%= theme._id %>/p/<%= puzzle._id %>?_method=PUT " method="POST"
+            enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="puzzleImage" class="form-label">Update Puzzle Image</label>
+                <input type="file" class="form-control" id="puzzleImage" name="puzzleImage">
+            </div>
+            <div class="mb-3">
+                <label for="hint" class="form-label">Update Hint</label>
+                <input type="text" class="form-control" id="hint" name="hint">
+            </div>
+            <button class="btn btn-success">Edit</button>
+        </form>
+    </div>
